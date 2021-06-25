@@ -1,8 +1,8 @@
-const Repeats = prompt("ingrese la cantidad de veces que desea que se repita el juego");
+const Repeats = prompt("Ingrese la cantidad de veces que desea que se repita el juego");
 
 const numberOfRepeats = Number.parseInt(Repeats);
 
-console.log(`el usuario quiere que el juego se repita un numero de ${numberOfRepeats} veces`); 
+console.log(`El usuario quiere que el juego se repita un numero de ${numberOfRepeats} veces`); 
 
 
 //creacion de ciclo for para la jugada y sus repeticiones
@@ -66,12 +66,16 @@ for( let count = 1; count <= numberOfRepeats; count = count + 1  ){
     //Mostrar con un console log los movimientos que hizo cada uno
     console.log({ playerMove, randomMoveAlert });
 
-    //Condicionar una respuesta para cada resultado
+    document.write("<br>" + `Tu jugada: ${playerMove} ` + "<br>"  )
+    document.write(`Jugada de la maquina: ${randomMoveAlert}` + "<br>" )
+    
+    //Condicionar una respuesta
+
     if( winner === "playerMove"){
-        document.write( "Felicidades, ganaste ! :D" )
+        document.write( " Felicidades, ganaste ! c:" + "<br>"  )
     }else if( winner === "randomMoveAlert" ){
-        document.write("Que pena, perdiste conta la maquina :(")
+        document.write(" Perdiste conta la maquina :( " + "<br>" )
     }else{
-        document.write( "Empataron :o" )
-    }        
+        document.write(" Empataron :o" + "<br>"  )
+    }       
 }
